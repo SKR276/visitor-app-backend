@@ -49,7 +49,7 @@ router.post("/signin",async(req,res)=>{
     }
     res.json(
         {
-            status:"success"
+            status:"success","userdata":data
         }
     )
 })

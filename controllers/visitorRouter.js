@@ -14,6 +14,10 @@ router.post("/add",async(req,res)=>{
 
 router.get("/viewall",async(req,res)=>{
     let data=await visitorModel.find()
+    .populate(
+        "securityId","securityName"
+    )
+    .exec()
     res.json(data)
 })
 
